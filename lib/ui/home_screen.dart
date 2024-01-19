@@ -27,7 +27,8 @@ class HomeScreen extends StatelessWidget {
                 itemBuilder: (context, index) {
                   return ListTile(
                     leading: CircleAvatar(child: Text('${index + 1}')),
-                    title: Text(value.data[index]),
+                    title: Text(value.data[index].name),
+                    subtitle: Text(value.data[index].phone.toString()),
                     trailing: IconButton(
                       icon: const Icon(Icons.cancel),
                       onPressed: () {

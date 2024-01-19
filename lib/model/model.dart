@@ -1,14 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:provider_example/model/user.dart';
 
 class ModelProvider extends ChangeNotifier {
-  List<String> data = [];
-  getAdd(String value) {
-    data.add(value);
+  List<User> data = [];
+  getAdd(User user) {
+    data.add(user);
     notifyListeners();
   }
 
-  getRemove(String value) {
-    data.remove(value);
+  getRemove(User user) {
+    data.remove(user);
     notifyListeners();
   }
 }
