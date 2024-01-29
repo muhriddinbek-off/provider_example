@@ -3,10 +3,18 @@ import 'package:provider/provider.dart';
 import 'package:provider_example/model/model.dart';
 import 'package:provider_example/model/user.dart';
 
-class AddUser extends StatelessWidget {
-  AddUser({super.key});
+class AddUser extends StatefulWidget {
+  const AddUser({super.key});
+
+  @override
+  State<AddUser> createState() => _AddUserState();
+}
+
+class _AddUserState extends State<AddUser> {
   TextEditingController controller = TextEditingController();
+
   TextEditingController controller1 = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
