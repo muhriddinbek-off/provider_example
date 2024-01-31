@@ -19,9 +19,16 @@ class _TotalScreenState extends State<TotalScreen> {
       ),
       body: Column(
         children: [
+          Image.asset(
+            'assets/Foto.png',
+            width: 300,
+            height: 300,
+            fit: BoxFit.fill,
+          ),
           ListTile(
-            title: Text(widget.products.name),
+            title: Text(widget.products.title),
             subtitle: Text(widget.products.price.toString()),
+            leading: Icon(widget.products.icons, size: 70),
           ),
         ],
       ),

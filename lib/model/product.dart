@@ -1,8 +1,14 @@
+import 'package:flutter/material.dart';
+
 class Products {
-  String name;
+  IconData icons;
+  String title;
   int price;
+  bool isSelect;
   Products({
-    required this.name,
+    required this.icons,
+    required this.isSelect,
     required this.price,
+    required this.title,
   });
 }

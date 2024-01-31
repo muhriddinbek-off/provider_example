@@ -1,31 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:provider_example/model/product.dart';
-import 'package:provider_example/model/user.dart';
 
 class ModelProvider extends ChangeNotifier {
   List<Products> info = [
-    Products(name: 'Boll', price: 50),
-    Products(name: 'Head', price: 40),
-    Products(name: 'Skite', price: 70),
-    Products(name: 'Phone', price: 20),
-    Products(name: 'Headphones', price: 90),
-    Products(name: 'Flower', price: 10),
-    Products(name: 'Apple', price: 60),
+    Products(icons: Icons.home, isSelect: false, price: 40, title: 'Home'),
+    Products(icons: Icons.person, isSelect: false, price: 50, title: 'Person'),
+    Products(icons: Icons.car_crash, isSelect: false, price: 20, title: 'Car crash'),
+    Products(icons: Icons.account_balance, isSelect: false, price: 10, title: 'Account'),
+    Products(icons: Icons.ballot, isSelect: false, price: 40, title: 'Ballot'),
+    Products(icons: Icons.format_align_center, isSelect: false, price: 70, title: 'Format'),
   ];
-  List<User> data = [];
-  getAdd(User user) {
-    data.add(user);
-    notifyListeners();
-  }
-
-  getRemove(User user) {
-    data.remove(user);
-    notifyListeners();
-  }
-
-  getChange(int index, User user) {
-    data.removeAt(index);
-    data.insert(index, user);
-    notifyListeners();
-  }
 }
